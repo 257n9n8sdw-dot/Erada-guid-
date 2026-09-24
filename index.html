@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل التوعوي الشامل - مجمع إرادة بتبوك</title>
+    <style>
+        :root {
+            --primary: #1e5652;
+            --accent: #d4a373;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #143d3a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        nav button:hover, nav button.active {
+            background-color: var(--accent);
+            color: var(--dark);
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .section.active {
+            display: block;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: var(--light);
+            border-top: 4px solid var(--primary);
+        }
+        .card.danger { border-top-color: var(--danger); }
+        .card.warning { border-top-color: var(--warning); }
+        .card.info { border-top-color: var(--info); }
+        
+        .code-box {
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .code-blue { background-color: #0275d8; }
+        .code-white { background-color: #6c757d; }
+        .code-red { background-color: #d9534f; }
+        .code-yellow { background-color: #f0ad4e; color: black; }
+
+        .search-box {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist-item input {
+            margin-left: 1rem;
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مجمع إرادة والصحة النفسية بتبوك</h1>
+    <p>الدليل التوعوي الشامل للسلامة والرعاية النفسية الكريمة</p>
+</header>
+
+<nav>
+    <button class="active" onclick="showSection('sec1', this)">السياسات العامة</button>
+    <button onclick="showSection('sec2', this)">مختبر الأخطاء</button>
+    <button onclick="showSection('sec3', this)">التعامل مع المرضى</button>
+    <button onclick="showSection('sec4', this)">الحقوق والميثاق</button>
+    <button onclick="showSection('sec5', this)">أكواد الطوارئ</button>
+    <button onclick="showSection('sec6', this)">قائمة التحقق</button>
+</nav>
+
+<div class="container">
+
+    <!-- Section 1 -->
+    <div id="sec1" class="section active">
+        <h2>الجزء الأول: السياسات العامة والانضباط المؤسسي</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>01. مكافحة العدوى</h3>
+                <p>غسل اليدين في اللحظات الخمس المعتمدة، والفرز الدقيق للنفايات الطبية وتعقيم الأجهزة بعد كل استخدام.</p>
+            </div>
+            <div class="card">
+                <h3>02. سلامة المرضى</h3>
+                <p>الإبلاغ الفوري عن شبه الحوادث (Near Miss)، والتحقق الثلاثي من هوية المريض قبل تقديم الرعاية.</p>
+            </div>
+            <div class="card">
+                <h3>03. السرية والخصوصية</h3>
+                <p>حظر مناقشة الحالات خارج الفريق العلاجي وتأمين الملفات الورقية والإلكترونية بشكل محكم.</p>
+            </div>
+            <div class="card">
+                <h3>04. المظهر والانضباط</h3>
+                <p>الالتزام بالزي الرسمي، ارتداء البطاقة، تجنب الإكسسوارات الحادة، والتحلي بالهدوء أثناء التعامل.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="sec2" class="section">
+        <h2>الجزء الثاني: مختبر الأخطاء الشائعة</h2>
+        <input type="text" id="errorSearch" class="search-box" placeholder="ابحث عن خطأ أو كود..." onkeyup="filterErrors()">
+        <div id="errorList">
+            <div class="card danger error-card">
+                <h3>خطأ LAB-COMM-01 (خطورة عالية)</h3>
+                <p><strong>الخطأ:</strong> المناداة بالعبارات الجافة بصوت عالٍ.</p>
+                <p><strong>النتيجة:</strong> إهانة المريض وفقدان الثقة.</p>
+                <p><strong>التصحيح الذهبي:</strong> المناداة برقم الانتظار واتباع السياسات الرسمية.</p>
+            </div>
+            <div class="card warning error-card" style="margin-top:1rem;">
+                <h3>خطأ LAB-SAFETY-02 (خطورة عالية)</h3>
+                <p><strong>الخطأ:</strong> إلقاء الإبر والمشارط في الأكياس العادية.</p>
+                <p><strong>النتيجة:</strong> خطر وخز العمال ونقل العدوى.</p>
+                <p><strong>التصحيح الذهبي:</strong> التخلص الفوري في صندوق الأدوات الحادة Sharp Box دون إعادة تغطيتها.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="sec3" class="section">
+        <h2>الجزء الثالث: دليل التعامل مع المريض النفسي ومريض الإدمان</h2>
+        <h3>مسار احتواء الغضب (De-escalation Flow)</h3>
+        <ol>
+            <li><strong>لاحظ:</strong> إشارات التوتر (قبضة اليد، التنفس السريع).</li>
+            <li><strong>هدئ:</strong> اخفض صوتك، اترك مسافة ذراع، وتأكد من وجود مخرج واضح.</li>
+            <li><strong>استمع:</strong> الإنصات الواعي دون مقاطعة أو إطلاق أحكام.</li>
+            <li><strong>احتوِ:</strong> تقديم خيارات وطمأنة المريض دون تحدي الأوهام.</li>
+        </ol>
+    </div>
+
+    <!-- Section 4 -->
+    <div id="sec4" class="section">
+        <h2>الجزء الرابع: حقوق المرضى وميثاق المهنة</h2>
+        <ul>
+            <li>الحق في الكرامة والاحترام دون تمييز.</li>
+            <li>الحق في السرية التامة للمعلومات والملفات الطبية.</li>
+            <li>الحق في الموافقة المستنيرة قبل أي إجراء.</li>
+            <li>الحق في الأمان والرعاية الأقل تقييداً (التقييد هو الحل الأخير).</li>
+        </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div id="sec5" class="section">
+        <h2>الجزء الخامس: أكواد الطوارئ (Timeline الاستجابة)</h2>
+        <div class="code-box code-blue">
+            <h3>💙 كود أزرق (توقف قلب / تنفس)</h3>
+            <p><strong>زمن الاستجابة:</strong> 0 - 10 ثوانٍ | ابدأ الإنعاش وأحضر عربة الطوارئ فوراً.</p>
+        </div>
+        <div class="code-box code-white">
+            <h3>🤍 كود أبيض (سلوك عنيف / اعتداء)</h3>
+            <p><strong>زمن الاستجابة:</strong> 0 - 30 ثانية | استدعِ الأمن، أخلِ المنطقة، واستخدم التهدئة اللفظية.</p>
+        </div>
+        <div class="code-box code-red">
+            <h3>🔥 كود أحمر (حريق / دخان)</h3>
+            <p><strong>زمن الاستجابة:</strong> فوري | طبق بروتوكول RACE ولا تستخدم المصاعد.</p>
+        </div>
+        <div class="code-box code-yellow">
+            <h3>☣️ كود أصفر (عدوى / تسرب بيولوجي)</h3>
+            <p><strong>زمن الاستجابة:</strong> دقيقة واحدة | أغلق المنطقة، ارتدِ أدوات الوقاية، وأبلغ مكافحة العدوى.</p>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div id="sec6" class="section">
+        <h2>الجزء السادس: قائمة التحقق التشغيلية (قبل المناوبة)</h2>
+        <div class="checklist-item">
+            <input type="checkbox" id="chk1">
+            <label for="chk1">مراجعة جدول المرضى وخطط التقييد والحراسة</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="chk2">
+            <label for="chk2">التأكد من نظافة اليدين وسلامة أدوات الوقاية الشخصية (PPE)</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="chk3">
+            <label for="chk3">فحص عربة الطوارئ والأدوية الحرجة</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="chk4">
+            <label for="chk4">تطبيق سياسة التسليم والاستلام بدقة</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="chk5">
+            <label for="chk5">التحقق من سوار الهوية لكل مريض</label>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function showSection(id, btn) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    function filterErrors() {
+        let input = document.getElementById('errorSearch').value.toLowerCase();
+        let cards = document.querySelectorAll('.error-card');
+        cards.forEach(card => {
+            let text = card.innerText.toLowerCase();
+            card.style.display = text.includes(input) ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>
